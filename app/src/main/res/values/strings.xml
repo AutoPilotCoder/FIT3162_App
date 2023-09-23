@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FIT3162_App</string>
+    <string name="User_Input_Textview">Input text for query :</string>
+</resources>
