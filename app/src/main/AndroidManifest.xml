@@ -13,6 +13,11 @@
         android:theme="@style/Theme.FIT3162_App"
         tools:targetApi="31">
         <activity
+            android:name=".SymptomsDisplayActivity"
+            android:exported="false"
+            android:label="@string/title_activity_symptoms_display"
+            android:theme="@style/Theme.FIT3162_App" />
+        <activity
             android:name=".HeartDiseaseDisplayActivity"
             android:exported="false" />
         <activity
