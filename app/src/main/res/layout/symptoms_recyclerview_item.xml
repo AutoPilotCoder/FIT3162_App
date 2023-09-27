@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp">
+    android:layout_height="wrap_content">
 
-
-    <TextView
-        android:id="@+id/symptom_name"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="Symptom Name" />
-
-    <TextView
-        android:id="@+id/symptom_description"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_below="@id/symptom_name"
-        android:text="Symptom Description" />
 
     <LinearLayout
+        android:id="@+id/item_layout"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/symptom_description"
-        android:background="@color/black"/>
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/symptoms_recyclerview_items_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/name_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/symptom_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Symptom Name"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/underline"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:translationY="-5sp"></LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/symptom_description"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Symptom Description"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 
 </RelativeLayout>
